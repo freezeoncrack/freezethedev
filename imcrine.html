@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery POV</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #000;
+      color: #fff;
+      flex-direction: column;
+    }
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff4500;
+      color: white;
+    }
+    video {
+      display: none; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="playButton">POV: You're a 2 year old and you find a battery</button>
+  
+  <video id="backgroundVideo" preload="none">
+    <source src="public/imcrine.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const button = document.getElementById('playButton');
+    const video = document.getElementById('backgroundVideo');
+
+    button.addEventListener('click', () => {
+      video.style.display = 'block';
+      video.muted = false;
+      video.volume = 1.0;
+      video.load();
+      video.play();
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!---- before u get mad at me for using ai, i didnt want to make all this shit -->
